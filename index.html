@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roqeebah Musa - Senior UI/UX Designer</title>
+  <title>Roqeebah Musa - UI/UX Designer</title>
   <meta name="description" content="Senior UI/UX Designer with 4+ years of experience in fintech, SaaS, and healthcare. Specializing in user research, design systems, accessibility, and prototyping." />
   <meta name="keywords" content="UI/UX Designer, User Experience, Design Systems, Fintech, SaaS, Healthcare, Prototyping, Accessibility" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -476,12 +476,12 @@
     }
 
  /* Contact section layout */
-#contact-inner {
+/* #contact-inner {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-}
-@media (min-width: 1024px) {
+} */
+/* @media (min-width: 1024px) {
   #contact-inner {
     flex-direction: row;
     gap: 5rem;
@@ -492,7 +492,7 @@
   #contact-form-wrap {
     width: 60%;
   }
-}
+} */
 /* Contact info items */
 .contact-item {
   display: flex;
@@ -733,7 +733,8 @@
       .form-row { grid-template-columns: 1fr 1fr; }
     }
     @media (min-width: 768px) {
-       .hide-desktop { display: none !important; }
+       /* .hide-mobile { display: none !important; } */
+       .show-mobile { display: flex !important; }
      .timeline-line-desktop { display: block; }
       .timeline-line-mobile { display: none; }
       .timeline-node-mobile { display: none; }
@@ -786,20 +787,21 @@
 }
      
     @media (min-width: 1024px) {
+      .hide-desktop { display: none !important; }
       .portfolio-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 300px; }
       .portfolio-large { grid-column: span 2; grid-row: span 2; }
       .portfolio-medium { grid-column: span 2; grid-row: span 1; }
       .portfolio-small { grid-column: span 1; grid-row: span 1; }
       #services-grid { grid-template-columns: repeat(3, 1fr); }
-      #about-inner { flex-direction: row !important; gap: 3rem !important; align-items: flex-start !important; }
-      #about-stats { width: 35% !important; }
-      #about-text { width: 65% !important; }
+      #about-inner { flex-direction: row !important; gap: 5rem }
+      #about-stats { width: 40% !important; }
+      #about-text { width: 60% !important; }
       .contact-layout { flex-direction: row; gap: 5rem; }
       .contact-left { width: 40%; }
       .contact-right { width: 60%; }
-      /* #contact-inner { flex-direction: row; gap: 5rem; }
+      #contact-inner { flex-direction: row; gap: 5rem; }
       #contact-info { width: 40%; }
-      #contact-form-wrap { width: 60%; } */
+      #contact-form-wrap { width: 60%; }
       #footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
       #hero-inner { flex-direction: row !important; align-items: center !important; gap: 5rem !important; }
     }
@@ -878,7 +880,6 @@
             <div class="reveal" style="display: flex; flex-wrap: wrap; gap: 1rem;">
               <button onclick="scrollToSection(event, 'portfolio')" class="btn-primary">View My Work <i class="ri-arrow-right-line"></i></button>
               <button onclick="scrollToSection(event, 'contact')" class="btn-secondary">Get in Touch</button>
-              <!-- <a href="./Assets/UX Design CV.png" download="Roqeebah_Musa_Resume.pdf" class="btn-tertiary"><i class="ri-download-2-line"></i> Download CV</a> -->
             </div>
           </div>
           <div style="flex: 1; display: flex; justify-content: center; align-items: center; width: 100%;">
@@ -996,16 +997,6 @@
                 <span class="tag">Tailwind CSS</span>
               </div>
             </div>
-            <!-- <div style="margin-bottom: 2rem;">
-              <h3 style="font-size: 0.875rem; font-weight: 600; color: #ffffff; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Industries</h3>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-                <span class="tag">Fintech</span>
-                <span class="tag">SaaS</span>
-                <span class="tag">Healthcare</span>
-                <span class="tag">E-commerce</span>
-                <span class="tag">EdTech</span>
-              </div>
-            </div> -->
             <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
               <a href="./Assets/UX Design CV.png" download="Roqeebah_Musa_Resume.pdf" class="btn-secondary">
                 <i class="ri-download-2-line"></i> Download Resume
@@ -1057,30 +1048,6 @@
             </div>
             <div class="portfolio-arrow"><i class="ri-arrow-right-up-line"></i></div>
           </div>
-          <!-- <div class="reveal portfolio-card portfolio-small" onmouseenter="hoverProject(this)" onmouseleave="unhoverProject(this)">
-            <div class="portfolio-image">
-              <img src="./Assets/HealthcareMediQuest.png" alt="CloudStack SaaS" loading="lazy">
-              <div class="portfolio-overlay"></div>
-            </div>
-            <div class="portfolio-content">
-              <span class="portfolio-category">Healthcare</span>
-              <h3 class="portfolio-title">MediQuest</h3>
-              <p class="portfolio-desc">A website for people to book an apointment with ease and get a hospital location near them.</p>
-            </div>
-            <div class="portfolio-arrow"><i class="ri-arrow-right-up-line"></i></div>
-          </div>
-          <div class="reveal portfolio-card portfolio-small" onmouseenter="hoverProject(this)" onmouseleave="unhoverProject(this)">
-            <div class="portfolio-image">
-              <img src="./Assets/AgriMarket.png" alt="MedFlow EHR System" loading="lazy">
-              <div class="portfolio-overlay"></div>
-            </div>
-            <div class="portfolio-content">
-              <span class="portfolio-category">E-Commerce</span>
-              <h3 class="portfolio-title">AgriMarket</h3>
-              <p class="portfolio-desc">An E-Commerce platform connecting farmers directly with buyers, enabling them to post and sell fresh produce online.</p>
-            </div>
-            <div class="portfolio-arrow"><i class="ri-arrow-right-up-line"></i></div>
-          </div> -->
           <div class="reveal portfolio-card portfolio-medium" onmouseenter="hoverProject(this)" onmouseleave="unhoverProject(this)">
             <div class="portfolio-image">
               <img src="./Assets/HealthcareMediQuest.png" alt="FinTrack Analytics" loading="lazy">
@@ -1118,21 +1085,6 @@
             </div>
             <div class="portfolio-arrow"><i class="ri-arrow-right-up-line"></i></div>
           </div>
-          <!-- <div class="reveal portfolio-card portfolio-large" onmouseenter="hoverProject(this)" onmouseleave="unhoverProject(this)">
-            <div class="portfolio-image">
-              <img src="https://readdy.ai/api/search-image?query=telemedicine platform UI design dark theme with video consultation interface professional healthcare minimalist modern design&width=680&height=680&seq=8&orientation=squarish" alt="CareConnect Telehealth" loading="lazy">
-              <div class="portfolio-overlay"></div>
-            </div>
-            <div class="portfolio-content">
-              <span class="portfolio-category">Healthcare</span>
-              <h3 class="portfolio-title">CareConnect Telehealth</h3>
-              <p class="portfolio-desc">Telemedicine platform for virtual consultations</p>
-            </div>
-            <div class="portfolio-arrow"><i class="ri-arrow-right-up-line"></i></div>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </section>
 
   <!-- EXPERIENCE -->
@@ -1180,7 +1132,6 @@
                   <p class="timeline-role">Frontend Instructor</p>
                   <p class="timeline-desc">I taught aspiring developers on how to use HTML,CSS,JavaScript, & React, sharing my expertise to help them build responsive & interactive web applications.</p>
                   <ul class="timeline-achievements">
-                    <!-- <li><span class="timeline-dot"></span><span>Improved user retention by 28% through UX improvements</span></li> -->
                     <li><span class="timeline-dot"></span><span>Taught foundational web development and design to teenagers. </span></li>
                     <li><span class="timeline-dot"></span><span>Created engaging learning materials and hands-on projects</span></li>
                   </ul>
@@ -1201,7 +1152,6 @@
                   <ul class="timeline-achievements">
                     <li><span class="timeline-dot"></span><span>Taught foundational Web development & design to students.</span></li>
                     <li><span class="timeline-dot"></span><span>Led coding and design sessions.</span></li>
-                    <!-- <li><span class="timeline-dot"></span><span>Received client satisfaction score of 98%</span></li> -->
                   </ul>
                 </div>
               </div>
@@ -1300,13 +1250,19 @@
   <!-- CONTACT -->
 
   <section id="contact" style="position: relative; padding: 6rem 0; background: #0a0a0a;">
-    <div style="width: 100%; padding: 0 1.5rem;">
+   
+    <div style="position: absolute; inset: 0; overflow: hidden;">
+      <div style="position: absolute; top: 0; left: 0; width: 24rem; height: 24rem; background: rgba(201, 169, 110, 0.03); border-radius: 50%; filter: blur(80px);"></div>
+      <div style="position: absolute; bottom: 0; right: 0; width: 20rem; height: 20rem; background: rgba(201, 169, 110, 0.03); border-radius: 50%; filter: blur(80px);"></div>
+    </div>
+
+    <div style="position: relative; z-index: 10; width: 100%; padding: 0 1.5rem;">
       <div style="max-width: 80rem; margin: 0 auto;">
         <div class="reveal" style="margin-bottom: 4rem;">
           <span style="font-size: 0.875rem; font-weight: 500; color: #c9a96e; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem; display: block;">Get in Touch</span>
           <h2 class="font-serif" style="font-size: clamp(1.875rem, 4vw, 3rem); font-weight: 600; color: #ffffff;">Let's Create <span class="text-gradient-gold">Together</span></h2>
         </div>
-        <div id="contact-inner" style="display: flex; flex-direction: row; gap: 3rem;">
+        <div id="contact-inner" style="display: flex; flex-direction: column; gap: 3rem;">
           <div id="contact-info">
             <div class="reveal" style="display: flex; flex-direction: column; gap: 2rem;">
               <p style="color: #a0a0a0; line-height: 1.75;">Have a project in mind or want to discuss design opportunities? I'd love to hear from you. Let's create something meaningful together.</p>
@@ -1333,12 +1289,12 @@
                   </div>
                 </div>
               </div>
-              <div style="display: flex; gap: 1rem; padding-top: 1rem;">
+              <!-- <div style="display: flex; gap: 1rem; padding-top: 1rem;">
                 <a href="#" aria-label="Dribbble" class="social-link"><i class="ri-dribbble-line"></i></a>
                 <a href="#" aria-label="Behance" class="social-link"><i class="ri-behance-line"></i></a>
                 <a href="#" aria-label="Twitter" class="social-link"><i class="ri-twitter-x-line"></i></a>
                 <a href="#" aria-label="GitHub" class="social-link"><i class="ri-github-line"></i></a>
-              </div>
+              </div> -->
             </div>
           </div>
           <div id="contact-form-wrap">
@@ -1434,44 +1390,6 @@ function updateCharCount(textarea) {
     document.getElementById('char-count').textContent = '0/500';
     document.getElementById('form-error').style.display = 'none';
   }
-  // async function handleContactSubmit(e) {
-  //   e.preventDefault();
-  //   const btn = document.getElementById('submit-btn');
-  //   const originalText = btn.innerHTML;
-  //   btn.innerHTML = '<span class="btn-spinner"></span> Sending...';
-  //   btn.disabled = true;
-  //   btn.style.cursor = 'not-allowed';
-  //   btn.style.opacity = '0.5';
-  //   const form = e.target;
-  //   const formData = new FormData(form);
-  //   const params = new URLSearchParams();
-  //   for (const [key, value] of formData.entries()) {
-  //     params.append(key, value);
-  //   }
-  //   try {
-  //     const response = await fetch('https://formspree.io/f/xnnvwyez', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //       body: params.toString(),
-  //     });
-  //     if (response.ok) {
-  //       form.style.display = 'none';
-  //       document.getElementById('contact-success').style.display = 'block';
-  //       document.getElementById('form-error').style.display = 'none';
-  //     } else {
-  //       throw new Error('Submit failed');
-  //     }
-  //   } catch (err) {
-  //     document.getElementById('form-error').style.display = 'block';
-  //   } finally {
-  //     btn.innerHTML = originalText;
-  //     btn.disabled = false;
-  //     btn.style.cursor = 'pointer';
-  //     btn.style.opacity = '1';
-  //   }
-  // }
-
-  // const form = document.getElementById('contact-form');
     const messageInput = document.getElementById('message');
     const charCount = document.getElementById('char-count');
     messageInput.addEventListener('input', () => { charCount.textContent = messageInput.value.length + '/500'; });
@@ -1504,8 +1422,6 @@ async function handleSubmit(e) {
     "Accept": "application/json"
   }
 });
-    // const result = await response.json();
-    // console.log("Formspree response:", result);
 
     if (response.ok) {
       form.style.display = "none";
@@ -1534,100 +1450,11 @@ function resetForm() {
   document.getElementById('form-error').style.display = 'none';
 }
 
-// async function handleSubmit(e) {
-//   e.preventDefault();
-
-//   const btn = document.getElementById('submit-btn');
-//   const btnText = document.getElementById('btn-text');
-//   const btnLoading = document.getElementById('btn-loading');
-//   const errorMsg = document.getElementById('form-error');
-//   const successMsg = document.getElementById('form-success');
-
-//   btnText.style.display = 'none';
-//   btnLoading.style.display = 'inline';
-//   btn.disabled = true;
-//   errorMsg.style.display = 'none';
-
-//   // Convert form data to JSON
-//   const formData = new FormData(form);
-//   const jsonData = Object.fromEntries(formData.entries());
-
-//   try {
-//     const response = await fetch("https://formspree.io/f/xnnvwyez", {
-//       method: "POST",
-//       headers: {
-//         "Accept": "application/json",
-//         "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify(jsonData)
-//     });
-
-//     const data = await response.json().catch(() => ({}));
-//     console.log("Formspree response:", data);
-//     if (response.ok) {
-//       form.style.display = "none";
-//       successMsg.style.display = "block";
-//       form.reset();
-
-//       // Reset char count if you have one
-//       const charCount = document.getElementById("charCount");
-//       if (charCount) charCount.textContent = "0/500";
-//     } else {
-//       errorMsg.style.display = "block";
-//     }
-
-//   } catch (error) {
-//     errorMsg.style.display = "block";
-//   } finally {
-//     btnText.style.display = "inline";
-//     btnLoading.style.display = "none";
-//     btn.disabled = false;
-//   }
-// }
-
 function resetForm() {
   document.getElementById('form-success').style.display = 'none';
   document.getElementById('contact-form').style.display = 'flex';
   document.getElementById('form-error').style.display = 'none';
 }
-
-  // async function handleSubmit(e) {
-  //     e.preventDefault();
-  //     const btn = document.getElementById('submit-btn');
-  //     const btnText = document.getElementById('btn-text');
-  //     const btnLoading = document.getElementById('btn-loading');
-  //     const errorMsg = document.getElementById('form-error');
-  //     btnText.style.display = 'none';
-  //     btnLoading.style.display = 'inline';
-  //     btn.disabled = true;
-  //     errorMsg.style.display = 'none';
-  //     const formData = new FormData(form);
-  //     const params = new URLSearchParams();
-  //     for (const [key, value] of formData.entries()) params.append(key, value);
-  //     try {
-  //       const response = await fetch('https://formspree.io/f/xnnvwyez', {
-  //         method: 'POST',
-  //         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //         body: params.toString(),
-  //       });
-  //       if (response.ok) {
-  //         form.style.display = 'none';
-  //         document.getElementById('form-success').style.display = 'block';
-  //         form.reset();
-  //         charCount.textContent = '0/500';
-  //       } else errorMsg.style.display = 'block';
-  //     } catch { errorMsg.style.display = 'block'; }
-  //     finally {
-  //       btnText.style.display = 'inline';
-  //       btnLoading.style.display = 'none';
-  //       btn.disabled = false;
-  //     }
-  //   }
-  //   function resetForm() {
-  //     document.getElementById('form-success').style.display = 'none';
-  //     document.getElementById('contact-form').style.display = 'flex';
-  //     document.getElementById('form-error').style.display = 'none';
-  //   }
 
     function scrollToSection(event, sectionId) {
       event.preventDefault();
@@ -1674,9 +1501,7 @@ function resetForm() {
         }, 5000);
       }, 1500);
     }
-    // function openProjectModal(projectId) {
-    //   alert('Project details modal for: ' + projectId + '\n\nIn a full implementation, this would open a detailed case study modal with project overview, design process, and outcomes.');
-    // }
+
     const navbar = document.getElementById('navbar');
     const scrollTopBtn = document.getElementById('scroll-top');
     window.addEventListener('scroll', () => {
